@@ -2,8 +2,6 @@ package main.java.com.escape.game;
 
 public class ModeChallenger extends Mode {
 
-    String result;
-
     public ModeChallenger() {
         super();
         combinaisonToFind = new CombinaisonAleatoire(settings);
@@ -16,8 +14,7 @@ public class ModeChallenger extends Mode {
         combinaisonGuess = new CombinaisonSaisie(new SaisieClavier("Proposez une combinaison"));
 
         if(!isWon()) {
-            result = combinaisonToFind.compareTo(combinaisonGuess);
-            System.out.println(result);
+            System.out.println(combinaisonToFind.compareTo(combinaisonGuess));
         }
 
     }

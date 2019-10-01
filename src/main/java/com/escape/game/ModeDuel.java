@@ -5,7 +5,6 @@ public class ModeDuel extends Mode {
     CombinaisonFinder finder;
     Combinaison combinaisonToFindForComputer;
     Combinaison combinaisonGuessForComputer;
-    String result;
 
     public ModeDuel() {
         super();
@@ -22,15 +21,14 @@ public class ModeDuel extends Mode {
     @Override
     public void play() {
         // Tentative de deviner
-        
+
         // Pour le joueur
         System.out.println("");
         System.out.println("*** JOUEUR ***");
 
         combinaisonGuess = new CombinaisonSaisie(new SaisieClavier("Proposez une combinaison"));
         if(!isWon()) {
-            result = combinaisonToFind.compareTo(combinaisonGuess);
-            System.out.println(result);
+            System.out.println(combinaisonToFind.compareTo(combinaisonGuess));
         }
 
         // Pour l'ordi

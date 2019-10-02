@@ -44,7 +44,6 @@ public class CombinaisonFinder {
 
     void readCorrection(String pCorrection) {
         correction = pCorrection;
-        logger.debug("Correction was : "+pCorrection);
         char cor;
         int sug;
         for (int index = 0; index<correction.length(); index++) {

@@ -14,7 +14,6 @@ public class ModeSelector {
         SaisieClavier modeJeu = new SaisieClavier("Choisisez votre mode de jeu (Challenger:1 Defender:2  Duel:3)");
         Mode mode = null;
 
-        logger.debug("Choix du mode");
         while(mode == null) {
             try {
                 switch (Integer.parseInt(modeJeu.saisie)) {

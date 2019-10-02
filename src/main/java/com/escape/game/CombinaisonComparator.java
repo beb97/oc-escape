@@ -43,7 +43,6 @@ public class CombinaisonComparator {
                 result += "+";
             }
         }
-
         logger.debug("Comparaison returned : "+result);
         return result;
     }

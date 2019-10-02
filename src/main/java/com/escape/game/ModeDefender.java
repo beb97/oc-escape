@@ -7,19 +7,15 @@ public class ModeDefender extends Mode {
     public ModeDefender() {
         super();
         finder = new CombinaisonFinder(settings.combinaisonLength);
-
         SaisieClavier combinaisonSaisie = new SaisieClavier("Choisissez la combinaison pour cette partie");
         combinaisonToFind = new CombinaisonSaisie(combinaisonSaisie);
-
     }
 
     @Override
     public void play() {
         compteurTour.nextTurn();
-
         combinaisonGuess = finder.guessCombinaison();
         System.out.println("Ordi propose : "+ combinaisonGuess.value);
-
         if(continueToPlay()) {
             SaisieClavier correction = new SaisieClavier("Faux. Saisissez la correction [ - + = ]");
             finder.readCorrection(correction.saisie);

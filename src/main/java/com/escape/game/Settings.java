@@ -20,17 +20,12 @@ public class Settings {
             InputStream input = getClass().getResourceAsStream("/game.properties");
             properties = new Properties();
             properties.load(input);
-
             turnLimit = Integer.parseInt(properties.getProperty("turn-limit"));
             combinaisonLength = Integer.parseInt(properties.getProperty("combinaison-length"));
             debug = Boolean.parseBoolean(properties.getProperty("debug"));
-
         } catch (Exception ex) {
             logger.error("Erreur lors de l'import des settings : "+ex);
         }
-
-
-
     }
 
     @Override

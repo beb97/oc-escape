@@ -13,7 +13,6 @@ public class ModeSelector {
         System.out.println();
         SaisieClavier modeJeu = new SaisieClavier("Choisisez votre mode de jeu (Challenger:1 Defender:2  Duel:3)");
         Mode mode = null;
-
         while(mode == null) {
             try {
                 switch (Integer.parseInt(modeJeu.saisie)) {
@@ -33,7 +32,6 @@ public class ModeSelector {
                 logger.error("Erreur lors du choix du mode : "+e);
             }
         }
-
         return mode;
     }
 }

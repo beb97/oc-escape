@@ -6,14 +6,6 @@ public class CombinaisonAleatoire extends Combinaison {
 
     static Logger logger = Logger.getLogger(CombinaisonAleatoire.class);
 
-    CombinaisonAleatoire() {
-        this(4);
-    }
-
-    CombinaisonAleatoire(Integer length) {
-        this(length, false);
-    }
-
     CombinaisonAleatoire(Integer length, Boolean debug) {
         this.setValue(String.valueOf(generateRandomInt(length)));
         if (debug) {
@@ -30,7 +22,6 @@ public class CombinaisonAleatoire extends Combinaison {
         logger.debug("Combinaison aléatoire généré : " + randomInt);
         return randomInt;
     }
-
 }
 
 

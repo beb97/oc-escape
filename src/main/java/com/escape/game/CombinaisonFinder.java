@@ -37,7 +37,6 @@ public class CombinaisonFinder {
             val = min + (max - min) / 2;
             candidate.setCharAt(index, (char)val);
         }
-
         currentSuggestion = candidate.toString();
         return new CombinaisonSaisie(currentSuggestion);
     }
@@ -47,10 +46,8 @@ public class CombinaisonFinder {
         char cor;
         int sug;
         for (int index = 0; index<correction.length(); index++) {
-
             cor = correction.charAt(index);
             sug = currentSuggestion.charAt(index);
-
             if(cor == '+') {
                 combinaisonMin.setCharAt(index, (char) (sug+1) );
             } else if (cor == '-') {
@@ -60,7 +57,6 @@ public class CombinaisonFinder {
                 combinaisonMax.setCharAt(index, (char) sug);
             }
         }
-
         logger.debug("Finder : new min is:"+combinaisonMin+" New max is:"+combinaisonMax);
     }
 }

@@ -11,10 +11,6 @@ public class SaisieClavier {
     String message;
     String saisie;
 
-    SaisieClavier() {
-        this("");
-    }
-
     SaisieClavier(String pMessage) {
         this.message = pMessage;
         System.out.println(message);
@@ -23,10 +19,6 @@ public class SaisieClavier {
 
         logger.debug("User entered : "+saisie);
 
-    }
-
-    public void show() {
-        System.out.println(this.saisie);
     }
 
 }

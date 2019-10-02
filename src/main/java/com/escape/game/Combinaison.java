@@ -14,5 +14,4 @@ public abstract class Combinaison {
     boolean equals(Combinaison other) {
         return other!=null && this.value.equals(other.value);
     }
-
 }

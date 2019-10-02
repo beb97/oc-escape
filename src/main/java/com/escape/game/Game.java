@@ -15,21 +15,17 @@ public class Game {
             mode = ms.chooseMode();
 
             logger.debug("Début de la partie");
-
             do {
                 mode.play();
             } while (mode.continueToPlay());
-
             logger.debug("Fin de la partie");
 
             if (mode.isWon()) {
                 logger.debug("Victoire");
                 mode.displayWin();
-
             } else {
                 logger.debug("Defaite");
                 mode.displayLose();
-
             }
 
         } while (true);

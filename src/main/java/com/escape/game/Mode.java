@@ -12,7 +12,6 @@ abstract public class Mode {
     Combinaison combinaisonGuess;
 
     Mode() {
-
         logger.debug("Init du mode : "+this);
         settings = new Settings();
         logger.debug("Settings are : "+settings);

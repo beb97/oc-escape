@@ -10,13 +10,10 @@ public class ModeChallenger extends Mode {
     @Override
     public void play() {
         compteurTour.nextTurn();
-
         combinaisonGuess = new CombinaisonSaisie(new SaisieClavier("Proposez une combinaison"));
-
         if(!isWon()) {
             System.out.println(combinaisonToFind.compareTo(combinaisonGuess));
         }
-
     }
 
     @Override

@@ -9,10 +9,6 @@ public class CompteurTour {
     Integer turnLimit;
     Integer turn;
 
-    CompteurTour() {
-        this(10);
-    }
-
     CompteurTour(Integer limit) {
         turnLimit = limit;
         turn = 0;

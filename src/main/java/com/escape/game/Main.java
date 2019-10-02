@@ -9,9 +9,8 @@ public class Main {
     public static void main(String[] args) {
 
         logger.debug("Début du jeu");
-
         new Game();
-
         logger.debug("Fin du jeu");
+
     }
 }

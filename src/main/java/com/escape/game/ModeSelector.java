@@ -1,6 +1,10 @@
 package main.java.com.escape.game;
 
+import org.apache.log4j.Logger;
+
 public class ModeSelector {
+
+    static Logger logger = Logger.getLogger(ModeSelector.class);
 
     ModeSelector() {
     }
@@ -10,6 +14,7 @@ public class ModeSelector {
         SaisieClavier modeJeu = new SaisieClavier("Choisisez votre mode de jeu (Challenger:1 Defender:2  Duel:3)");
         Mode mode = null;
 
+        logger.debug("Choix du mode");
         while(mode == null) {
             try {
                 switch (Integer.parseInt(modeJeu.saisie)) {
@@ -26,7 +31,7 @@ public class ModeSelector {
                         break;
                 }
             } catch (Exception e) {
-
+                logger.error("Erreur lors du choix du mode : "+e);
             }
         }
 

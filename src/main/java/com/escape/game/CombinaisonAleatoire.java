@@ -1,6 +1,10 @@
 package main.java.com.escape.game;
 
+import org.apache.log4j.Logger;
+
 public class CombinaisonAleatoire extends Combinaison {
+
+    static Logger logger = Logger.getLogger(CombinaisonAleatoire.class);
 
     CombinaisonAleatoire() {
         this(4);
@@ -23,6 +27,7 @@ public class CombinaisonAleatoire extends Combinaison {
 
     Integer generateRandomInt(Integer length) {
         Integer randomInt = (int) (Math.random() * Math.pow(10, length));
+        logger.debug("Combinaison aléatoire généré : " + randomInt);
         return randomInt;
     }
 

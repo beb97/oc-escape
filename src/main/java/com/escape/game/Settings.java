@@ -1,9 +1,15 @@
 package main.java.com.escape.game;
 
+import org.apache.log4j.Logger;
+
 import java.io.InputStream;
 import java.util.Properties;
 
+
 public class Settings {
+
+    static Logger logger = Logger.getLogger(Settings.class);
+
     Properties properties;
     Integer turnLimit = 10;
     Boolean debug = false;
@@ -20,7 +26,19 @@ public class Settings {
             debug = Boolean.parseBoolean(properties.getProperty("debug"));
 
         } catch (Exception ex) {
-            ex.printStackTrace();
+            logger.error("Erreur lors de l'import des settings : "+ex);
         }
+
+
+
+    }
+
+    @Override
+    public String toString() {
+        return "Settings{" +
+                "turnLimit=" + turnLimit +
+                ", debug=" + debug +
+                ", combinaisonLength=" + combinaisonLength +
+                '}';
     }
 }

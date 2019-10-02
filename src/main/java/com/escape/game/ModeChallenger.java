@@ -44,4 +44,9 @@ public class ModeChallenger extends Mode {
     public boolean continueToPlay() {
         return (!isWon() && !isLost());
     }
+
+    @Override
+    public String toString() {
+        return "ModeChallenger";
+    }
 }

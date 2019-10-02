@@ -69,4 +69,9 @@ public class ModeDuel extends Mode {
     public boolean continueToPlay() {
         return (!isWon() && !isLost());
     }
+
+    @Override
+    public String toString() {
+        return "ModeDuel";
+    }
 }

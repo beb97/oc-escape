@@ -1,6 +1,11 @@
 package main.java.com.escape.game;
 
+import org.apache.log4j.Logger;
+
 public class CombinaisonFinder {
+
+    static Logger logger = Logger.getLogger(CombinaisonFinder.class);
+
     StringBuilder combinaisonMin;
     StringBuilder combinaisonMax;
     String currentSuggestion;
@@ -39,6 +44,7 @@ public class CombinaisonFinder {
 
     void readCorrection(String pCorrection) {
         correction = pCorrection;
+        logger.debug("Correction was : "+pCorrection);
         char cor;
         int sug;
         for (int index = 0; index<correction.length(); index++) {
@@ -55,5 +61,7 @@ public class CombinaisonFinder {
                 combinaisonMax.setCharAt(index, (char) sug);
             }
         }
+
+        logger.debug("Finder : new min is:"+combinaisonMin+" New max is:"+combinaisonMax);
     }
 }

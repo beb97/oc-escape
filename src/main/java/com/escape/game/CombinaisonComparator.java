@@ -1,6 +1,11 @@
 package main.java.com.escape.game;
 
+import org.apache.log4j.Logger;
+
 public class CombinaisonComparator {
+
+    static Logger logger = Logger.getLogger(CombinaisonComparator.class);
+
     Combinaison c1;
     Combinaison c2;
 
@@ -38,6 +43,8 @@ public class CombinaisonComparator {
                 result += "+";
             }
         }
+
+        logger.debug("Comparaison returned : "+result);
         return result;
     }
 }
